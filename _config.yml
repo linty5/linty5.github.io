@@ -30,8 +30,6 @@ exclude:
 # Jekyll SEO Tag (Optional)
 # =========================
 logo: logo.png
-social:
-  name: LIN Tingyu
-  links:
 google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
 lang: en
+subscribe: false
