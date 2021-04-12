@@ -1,8 +1,8 @@
-title: Hamilton
-description: A minimal and beautiful Jekyll theme best for writing and note-taking.
-author: Shangzhi Huang
+title: LIN Tingyu
+description: Personal Website
+author: LIN Tingyu
 avatar: /logo.png
-email: ngzhio@gmail.com
+email: 951060525@qq.com
 
 plugins:
   - jekyll-seo-tag
@@ -29,15 +29,9 @@ exclude:
 
 # Jekyll SEO Tag (Optional)
 # =========================
-twitter:
-  username: ngzhio
-  card: summary
 logo: logo.png
 social:
-  name: Shangzhi Huang
+  name: LIN Tingyu
   links:
-    - https://twitter.com/ngzhio
-    - https://www.facebook.com/ngzhio
-    - https://github.com/ngzhio
 google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
 lang: en
