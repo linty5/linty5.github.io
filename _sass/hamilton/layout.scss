@@ -41,7 +41,7 @@
 
 .site-title {
   @include relative-font-size(1.625);
-  font-family:"Palatino Linotype","GarogierRegular",Georgia,"Palatino","Times","Times New Roman",serif;
+  font-family: $handwriting-font-family;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
@@ -354,7 +354,7 @@ ul.social-icons {
 }
 
 .post-list {
-  font-family: "Palatino Linotype","GarogierRegular",Georgia,"Palatino","Times","Times New Roman",serif;
+  font-family: $headline-font-family;
   margin-left: 0;
   padding-left: 0;
   list-style: none;
@@ -504,7 +504,7 @@ ul.post-categories {
 .post-title,
 .post-content h1 {
   @include relative-font-size(1.8);
-  font-family: "Palatino Linotype","GarogierRegular",Georgia,"Palatino","Times","Times New Roman",serif;
+  font-family: $headline-font-family;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: $base-line-height * $base-font-size * 2;
@@ -515,11 +515,11 @@ ul.post-categories {
 }
 
 .post-content {
-  font-family: "Palatino Linotype","GarogierRegular",Georgia,"Palatino","Times","Times New Roman",serif;
+  font-family: $reading-font-family;
   margin-bottom: $spacing-unit;
 
   h2, h3, h4, h5, h6 {
-    font-family: "Palatino Linotype","GarogierRegular",Georgia,"Palatino","Times","Times New Roman",serif;
+    font-family: $headline-font-family;
   }
 
   h2         { margin-top: $spacing-unit * 2 }
@@ -593,7 +593,7 @@ ul.post-categories {
 
 .post-list-by-taxonomy {
   time {
-    font-family: "Palatino Linotype","GarogierRegular",Georgia,"Palatino","Times","Times New Roman",serif;
+    font-family: $code-font-family;
   }
 }
 
