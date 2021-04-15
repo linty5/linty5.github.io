@@ -1,6 +1,6 @@
 - title: GitHub
   url: https://github.com/linty5
   icon: fab fa-github
-- title: CSDN
-  url: https://blog.csdn.net/smiekickass
-  icon: ./logo.png
+- links:
+  Github: https://github.com/linty5
+  CSDN: https://blog.csdn.net/smiekickass
