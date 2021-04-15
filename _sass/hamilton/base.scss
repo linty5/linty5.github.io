@@ -30,7 +30,9 @@ ul, ol, dl, figure, iframe,
  * Basic styling
  */
 body {
-  font-family: $base-font-family;
+  font-family:"GarogierRegular",Georgia,
+	        "Palatino","Palatino Linotype",
+		    "Times","Times New Roman",serif;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -106,14 +108,14 @@ a {
 blockquote {
   border-left: 0.1em solid;
   padding-left: $spacing-unit;
-  font-style: italic;
+  font-style: Palatino Linotype;
 
   > :last-child {
     margin-bottom: 0;
   }
 
   i, em {
-    font-style: normal;
+    font-style: Palatino Linotype;
   }
 }
 
