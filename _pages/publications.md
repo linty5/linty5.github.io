@@ -6,8 +6,6 @@ author_profile: true
 ---
 You can also find my full publication list on my [Google Scholar profile](https://scholar.google.com/citations?user=QyVVPMoAAAAJ&hl=en&oi=ao).
 
-{% endif %}
-
 {% include base_path %}
 
 {% for post in site.publications reversed %}
