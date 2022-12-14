@@ -1,14 +1,14 @@
 ---
 layout: archive
-title: "CV"
-permalink: /cv/
+title: "中文简历"
+permalink: /cv_cn/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
-
+还没写<br>
 Education
 ======
 * 2019.09 - 2020.10 MSc in Multimedia Information Technology, Distinction degree, **City University of Hong Kong**. <br>
