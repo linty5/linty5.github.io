@@ -22,7 +22,7 @@ Tingyu LIN is a Deep Learning Algorithm Engineer at WOODMAN AI, a Shanghai-based
 ------
 My research interests include computer vision, computational photography, and deep learning. My main research goal is to develop improved deep learning methods with a clear motivation from real-world problems, especially in industrial applications, in order to achieve intelligence in robot vision. I approach this goal through image representation learning, and deep generative modeling. 
 
-<font color='red'>I am open to finding a Ph.D position now!!!</font>
+<!--<font color='red'>I am open to a Ph.D position now!!!</font>-->
 
 <br/>
 
