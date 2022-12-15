@@ -37,9 +37,9 @@ Yuzhi Zhao, Lai-Man Po, Qiong Yan, Wei Liu, **Tingyu Lin**. <font color='Navy'>H
   
 Honor
 ======
-1st Place in NTIRE 2020 Challenge on Hyperspectral Reconstruction from RGB Images, CVPR NTIRE Workshop, 2020
-Honorable Mention in American College Student Mathematical Modeling Competition, 2018
-Distinction in College Student Innovative Training Plan, Guangdong Province, 2017
+* 1st Place in NTIRE 2020 Challenge on Hyperspectral Reconstruction from RGB Images, CVPR NTIRE Workshop, 2020
+* Honorable Mention in American College Student Mathematical Modeling Competition, 2018
+* Distinction in College Student Innovative Training Plan, Guangdong Province, 2017
 
 
 Skills
