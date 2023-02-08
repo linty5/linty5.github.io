@@ -1,0 +1,153 @@
+---
+layout: archive
+title: "Others"
+permalink: /flappybird/flappybird/
+author_profile: true
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flappy Bird</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="loadSource.js"></script>
+    <script src="birds.js"></script>
+    <script src="sky.js"></script>
+    <script src="land.js"></script>
+    <script src ="tunnel.js"></script>
+    <script src ="board.js"></script>
+    <script src ="func.js"></script>
+</head>
+<body>
+	<canvas class='myCanvas' id='myCanvas' width="800" height="600" tabindex="0"></canvas>
+</body>
+<script>
+	var canvas=document.getElementById("myCanvas");
+	canvas.focus();
+	var ctx=canvas.getContext('2d');
+	var imglist = [
+		{ "name":"birds","src":"img/birds.png"},
+		{ "name":"land","src":"img/land.png"},
+		{ "name":"tunnel1","src":"img/pipe1.png"},
+		{ "name":"tunnel2","src":"img/pipe2.png"},
+		{ "name":"sky","src":"img/sky.png"},
+		{ "name":"board","src":"img/board.png"}
+	];
+	var bestscore = 0;
+	
+	load(imglist,function(imgs){
+		var score = 0;
+		var start_posx = 150;
+		var board = new Board(imgs["board"],0,bestscore,score,ctx);
+		
+		var bird = new Bird(imgs["birds"],start_posx,100,0.0003,0.0006,ctx);
+		//实例化天空
+		var sky1 = new Sky(imgs["sky"],0,-0.3,ctx);
+		var sky2 = new Sky(imgs["sky"],800,-0.3,ctx);
+	 
+		var land1 = new Land(imgs["land"],0,-0.3,ctx);//背景，X位置，速度，ctx
+		var land2 = new Land(imgs["land"],336*1,-0.3,ctx);
+		var land3 = new Land(imgs["land"],336*2,-0.3,ctx);
+		var land4 = new Land(imgs["land"],336*3,-0.3,ctx);
+	 
+		var tunnel1 = new Tunnel(imgs["tunnel2"],imgs["tunnel1"],400, -0.1,ctx);
+		var tunnel2 = new Tunnel(imgs["tunnel2"],imgs["tunnel1"],600, -0.1,ctx);
+		var tunnel3 = new Tunnel(imgs["tunnel2"],imgs["tunnel1"],800, -0.1,ctx);
+		var tunnel4 = new Tunnel(imgs["tunnel2"],imgs["tunnel1"],1000,-0.1,ctx);
+		var tunnel5 = new Tunnel(imgs["tunnel2"],imgs["tunnel1"],1200,-0.1,ctx);
+	 
+		var preTime= Date.now();
+		var gameover = false;
+
+        function run(){
+			var now = Date.now();
+            dt = now - preTime;
+            preTime = now;
+        
+            ctx.clearRect(0,0,800,600);
+			
+		    //图片绘制
+			
+		    sky1.update(dt);
+		    sky1.draw();
+		    sky2.update(dt);
+		    sky2.draw();
+		    sky1.setNum(2);
+ 
+		    land1.update(dt);
+		    land1.draw();
+		    land2.update(dt);
+		    land2.draw();
+		    land3.update(dt);
+		    land3.draw();
+		    land4.update(dt);
+		    land4.draw();
+		    land1.setNum(4);
+		   
+		    tunnel1.update(dt);
+            tunnel1.draw();
+            tunnel1.check_score(start_posx);
+            tunnel2.update(dt);
+            tunnel2.draw();
+            tunnel2.check_score(start_posx);
+            tunnel3.update(dt);
+            tunnel3.draw();
+            tunnel3.check_score(start_posx);
+            tunnel4.update(dt);
+            tunnel4.draw();
+            tunnel4.check_score(start_posx);
+            tunnel5.update(dt);
+            tunnel5.draw();
+            tunnel5.check_score(start_posx);
+            tunnel1.setNum(5,200);
+		    bird.update(dt);
+		    bird.draw();
+			
+			score = tunnel1.score + tunnel2.score + tunnel3.score + tunnel4.score + tunnel5.score
+			board.draw(score);
+			
+            gameover = gameover || tunnel1.Collide(bird.x ,bird.y);
+            gameover = gameover || tunnel2.Collide(bird.x ,bird.y);
+            gameover = gameover || tunnel3.Collide(bird.x ,bird.y);
+            gameover = gameover || tunnel4.Collide(bird.x ,bird.y);
+            gameover = gameover || tunnel5.Collide(bird.x ,bird.y);
+ 
+            if(bird.y < 0 || bird.y > 488 -45/2 ){
+                gameover = true ;
+            }
+            if(!gameover){
+                requestAnimationFrame(run);
+            }
+			else{
+				// var button_r = new drawButton(ctx,{x:360,y:282}, 80, 36, 4, '#black', '#yellow', 'Restart', '#white', 14)
+				if (score > bestscore){
+					bestscore = score;
+				}
+				canvas.addEventListener("keydown",function(){
+					bird.init(imgs["birds"],start_posx,100,0.0003,0.0006,ctx);
+					
+					tunnel1.init(imgs["tunnel2"],imgs["tunnel1"],400, -0.1,ctx);
+					tunnel2.init(imgs["tunnel2"],imgs["tunnel1"],600, -0.1,ctx);
+					tunnel3.init(imgs["tunnel2"],imgs["tunnel1"],800, -0.1,ctx);
+					tunnel4.init(imgs["tunnel2"],imgs["tunnel1"],1000,-0.1,ctx);
+					tunnel5.init(imgs["tunnel2"],imgs["tunnel1"],1200,-0.1,ctx);
+	 
+					preTime= Date.now();
+					gameover = false;
+					score = 0;
+					requestAnimationFrame(run);
+				})	
+			}
+        }
+        //每一帧都执行run函数
+		requestAnimationFrame(run);
+ 
+        //为canvas添加事件监听函数
+        canvas.addEventListener("click",function(){
+        	bird.speed =  -0.3;
+		})
+      })
+ 
+</script>
+</html>
