@@ -17,7 +17,7 @@ redirect_from:
 
 工作经历
 ======
-* 2021.10 - 现在: 深度学习算法工程师
+* 2021.10 - 2022.11: 深度学习算法工程师
   * 樵弋智造, 研发部
   * 工业缺陷检测; 生成模型; 少样本学习
 
@@ -27,7 +27,7 @@ redirect_from:
 
 出版物
 ======
-Yuzhi Zhao, Lai-Man Po, **Tingyu Lin**, Qiong Yan, Wei Liu, Pengfei Xian. <font color='Navy'>HSGAN: Hyperspectral Reconstruction from RGB Images with Generative Adversarial Network</font>. Under Major Revision of IEEE Transactions on Neural Networks and Learning Systems
+Yuzhi Zhao, Lai-Man Po, **Tingyu Lin**, Qiong Yan, Wei Liu, Pengfei Xian. <font color='Navy'>HSGAN: Hyperspectral Reconstruction from RGB Images with Generative Adversarial Network</font>. Accepted by IEEE Transactions on Neural Networks and Learning Systems, currently in the queue for publication
 
 Yuzhi Zhao, Lai-Man Po, **Tingyu Lin**, Xuehui Wang, Kangcheng Liu, et al. <font color='Navy'>Legacy Photo Editing with Learned Noise Prior</font>. WACV (oral), 2021
 
@@ -45,4 +45,4 @@ Yuzhi Zhao, Lai-Man Po, Qiong Yan, Wei Liu, **Tingyu Lin**. <font color='Navy'>H
 ======
 * 编程技能: 熟悉 C++/C, Python; 基本掌握 SQL, Matlab, Verilog (VHDL)
 * 框架 & 库: 熟悉 Pytorch, PaddlePaddle; 基本掌握 TensorFlow, OpenCV.
-* 语言: Chinese (母语). English (CEFR: C1, IELTS: 7.0, L:7.0/R:8.5/W:5.5/S:6.0)
+* 语言: Chinese (母语). English (CEFR: C1, IELTS: 7.0, L:7.5/R:7.5/W:6.5/S:6.0)

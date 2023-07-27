@@ -12,5 +12,5 @@ main:
   - title: "中文简历"
     url: /cv_cn/
 
-  - title: "Others"
-    url: /flappybird/flappybird/
+  # - title: "Others"
+  #   url: /flappybird/flappybird/

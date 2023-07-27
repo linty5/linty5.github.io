@@ -14,7 +14,7 @@ You can also find my full publication list on my [Google Scholar profile](https:
 
 **Journal**
 ======
-Yuzhi Zhao, Lai-Man Po, **Tingyu Lin**, Qiong Yan, Wei Liu, Pengfei Xian. <font color='Navy'>HSGAN: Hyperspectral Reconstruction from RGB Images with Generative Adversarial Network</font>. Under Major Revision of IEEE Transactions on Neural Networks and Learning Systems ([Code](https://github.com/zhaoyuzhi/HSGAN))
+Yuzhi Zhao, Lai-Man Po, **Tingyu Lin**, Qiong Yan, Wei Liu, Pengfei Xian. <font color='Navy'>HSGAN: Hyperspectral Reconstruction from RGB Images with Generative Adversarial Network</font>. Accepted by IEEE Transactions on Neural Networks and Learning Systems, currently in the queue for publication ([Code](https://github.com/zhaoyuzhi/HSGAN))
 
 
 **Conference**

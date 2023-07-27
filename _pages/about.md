@@ -8,15 +8,17 @@ redirect_from:
   - /about.html
 ---
 
-Deep Learning Algorithm Engineer <br>
-WOODMAN AI, Industrial Defect Detection <br>
-Shanghai, China
+BEng@SYSU SE, MSc@CityU EE <br>
+Guangzhou, China <br>
+<font color='Orange'>Hi! I am looking for a PhD position</font>
 
 **Short Bio**
 ------
-Tingyu LIN's name in Chinese is 林莛庾, you can call him "Timmy".<br>
+My name is Tingyu LIN, my name in Chinese is 林莛庾, you can call me "Timmy".<br>
 
-Tingyu LIN is a Deep Learning Algorithm Engineer at WOODMAN AI, a Shanghai-based industrial defect detection startup. Before that, He obtained the M.S. degree with **distinction** in multimedia information technology at the City University of Hong Kong in 2020 and the B.Eng. degree in software engineering at Sun Yat-sen University in 2019. 
+I obtained the M.S. degree with **distinction** in multimedia information technology from [Department of Electrical Engineering](https://www.ee.cityu.edu.hk/), [City University of Hong Kong](https://www.cityu.edu.hk/) in 2020 and the B.Eng. degree in software engineering from [School of Computer Science and Engineering](https://cse.sysu.edu.cn/), [Sun Yat-sen University](https://www.sysu.edu.cn/) in 2019. 
+
+I have worked as an Image Engineer at Camera R & D department, [Autel Robotics](https://www.autelrobotics.cn/), developing image algorithms for cameras using C++, and also designing a prototype multispectral imaging system for large drones. After that, I have worked as a Deep Learning Algorithm Engineer at Research department, [WOODMAN AI](https://www.woodman-ai.com/), a Shanghai-based startup, focusing on industrial defect detection and 3D imaging systems.
 
 **Research Interests**
 ------
@@ -28,6 +30,8 @@ My research interests include computer vision, computational photography, and de
 
 **News**
 ======
+- Jul 2023: "HSGAN: Hyperspectral Reconstruction from RGB Images with Generative Adversarial Network" is **accepted** to IEEE TNNLS 2023
+
 - Oct 2021: I accepted an invitation to join WOODMAN AI, an industrial defect detection company based in Shanghai, as a deep learning algorithm engineer.
 
 - Nov 2020: "Legacy Photo Editing with Learned Noise Prior" is **accepted** to WACV 2021

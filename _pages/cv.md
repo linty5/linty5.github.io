@@ -18,7 +18,7 @@ Education
 
 Work experience
 ======
-* 2021.10 - now: Deep learning Algorithm Engineer
+* 2021.10 - 2022.11: Deep learning Algorithm Engineer
   * WOODMAN AI, Research department
   * Inspection based on detection and segmentation method; Generative model; Few-shot learning
 
@@ -28,7 +28,7 @@ Work experience
 
 Publications
 ======
-Yuzhi Zhao, Lai-Man Po, **Tingyu Lin**, Qiong Yan, Wei Liu, Pengfei Xian. <font color='Navy'>HSGAN: Hyperspectral Reconstruction from RGB Images with Generative Adversarial Network</font>. Under Major Revision of IEEE Transactions on Neural Networks and Learning Systems
+Yuzhi Zhao, Lai-Man Po, **Tingyu Lin**, Qiong Yan, Wei Liu, Pengfei Xian. <font color='Navy'>HSGAN: Hyperspectral Reconstruction from RGB Images with Generative Adversarial Network</font>. Accepted by IEEE Transactions on Neural Networks and Learning Systems, currently in the queue for publication
 
 Yuzhi Zhao, Lai-Man Po, **Tingyu Lin**, Xuehui Wang, Kangcheng Liu, et al. <font color='Navy'>Legacy Photo Editing with Learned Noise Prior</font>. WACV (oral), 2021
 
@@ -46,5 +46,5 @@ Skills
 ======
 * Programming Skills: Proficient in C++/C, Python; Basic in SQL, Matlab, Verilog (VHDL)
 * Frameworks & Library: Proficient in Pytorch, PaddlePaddle; Basic in TensorFlow, OpenCV.
-* Language: Chinese (Native). English (CEFR: C1, IELTS: 7.0, L:7.0/R:8.5/W:5.5/S:6.0)
+* Language: Chinese (Native). English (CEFR: C1, IELTS: 7.0, L:7.5/R:7.5/W:6.5/S:6.0)
 * Others: Work responsibility, cheerful personality and communication skills
