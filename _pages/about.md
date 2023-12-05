@@ -7,9 +7,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<br>
 
-[Predoctoral Researcher](https://informatics.tuwien.ac.at/people/tingyu-lin)<br><br>
+[Predoctoral Researcher](https://informatics.tuwien.ac.at/people/tingyu-lin)<br>
 Computer Vision Lab,<br>
 Institute of Visual Computing & Human Centered Technology,<br>
 TU Wien<br>
