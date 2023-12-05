@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Tingyu LIN"
   avatar           : "tingyu_lin.png"
-  bio              : "BEng@SYSU SE, MSc@CityU EE"
-  location         : "Guangzhou, China"
+  bio              : "Predoctoral Researcher@TUW, BEng@SYSU SE, MSc@CityU EE"
+  location         : "Vienna, Austria"
   employer         :
   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=QyVVPMoAAAAJ&hl=en&oi=ao)"
-  email            : tingyulin3-c@my.cityu.edu.hk
+  email            : tingyu.lin@tuwien.ac.at
   # researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
