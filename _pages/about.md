@@ -7,11 +7,12 @@ redirect_from:
   - /about/
   - /about.html
 ---
-[Predoctoral Researcher](https://informatics.tuwien.ac.at/people/tingyu-lin)
+<br>
 
-Computer Vision Lab,
-Institute of Visual Computing & Human Centered Technology,
-TU Wien
+[Predoctoral Researcher](https://informatics.tuwien.ac.at/people/tingyu-lin)<br><br>
+Computer Vision Lab,<br>
+Institute of Visual Computing & Human Centered Technology,<br>
+TU Wien<br>
 
 Vienna, Austria <br>
 
@@ -24,10 +25,6 @@ I obtained the M.S. degree with **distinction** in multimedia information techno
 I have worked as an Image Engineer at Camera R & D department, [Autel Robotics](https://www.autelrobotics.cn/), developing image algorithms for cameras using C++, and also designing a prototype multispectral imaging system for large drones. After that, I have worked as a Deep Learning Algorithm Engineer at Research department, [WOODMAN AI](https://www.woodman-ai.com/), a Shanghai-based startup, focusing on industrial defect detection and 3D imaging systems.<br>
 
 I am now as a predoctoral researcher at the [Computer Vision Lab](https://cvl.tuwien.ac.at/), [Institute of Visual Computing & Human-Centered Technology](https://informatics.tuwien.ac.at/), [TU Wien](https://www.tuwien.at/en/), Austria. I am currently conducting research for the FWF doctoral program "Visual Analytics and Computer Vision Meet Cultural Heritage ([VaCoViCu](https://visual-heritage.fhstp.ac.at/))" under the supervision of [Prof. Robert Sablatnig](https://cvl.tuwien.ac.at/staff/robert-sablatnig/). This project is a collaborative effort with [Institute of Creative\Media/Technologies](https://icmt.fhstp.ac.at/en), [FH ST. PÖLTEN](https://research.fhstp.ac.at/en), and I am also under the supervision of [Prof. Wolfgang Aigner](https://icmt.fhstp.ac.at/en/team/wolfgang-aigner). My research primarily focuses on the automatic image analysis and visualization of historical photographs and amateur films with the goal of preserving our cultural heritage.
-
-<br>
-
-
 <br/>
 
 **News**
