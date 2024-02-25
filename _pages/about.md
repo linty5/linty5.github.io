@@ -15,7 +15,7 @@ TU Wien<br>
 
 Vienna, Austria <br>
 
-**Short Bio**
+**Bio**
 ------
 My name is Tingyu LIN, my name in Chinese is 林莛庾, you can call me "Timmy".<br>
 
@@ -26,6 +26,8 @@ I am now as a predoctoral researcher at the [Computer Vision Lab](https://cvl.tu
 
 **News**
 ======
+
+- Feb 2024: Congratulations on the [successful launch](https://visual-heritage.fhstp.ac.at/news/unlocking-cultural-heritage-successful-launch-of-visual-heritage-phd-program2) of "Visual Heritage" PhD program!
 
 - Nov 2023: I start my doctoral research at CVL, TU Wien.
 

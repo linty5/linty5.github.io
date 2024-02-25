@@ -11,6 +11,8 @@ redirect_from:
 
 Education
 ======
+* 2023.11 -   now   Doctoral student in Computer Science, **Technische Universität Wien**. <br>
+&ensp;&ensp;&ensp;(supervised by [Prof. Robert Sablatnig](https://cvl.tuwien.ac.at/staff/robert-sablatnig/))
 * 2019.09 - 2020.10 MSc in Multimedia Information Technology, Distinction degree, **City University of Hong Kong**. <br>
 &ensp;&ensp;&ensp;(supervised by [Prof. Lai-Man Po](http://www.ee.cityu.edu.hk/~lmpo/), GPA: 3.5/4.3)
 * 2015.08 - 2019.06 B.Eng. in Software Engineering, **Sun Yat-sen University**. <br>
@@ -18,12 +20,16 @@ Education
 
 Work experience
 ======
+* 2023.12 -   now  : Project Assistant
+  * Computer Vision Lab, Institute of Visual Computing & Human-Centered Technology, TU Wien
+  * FWF doctoral program “Visual Analytics and Computer Vision Meet Cultural Heritage ([VaCoViCu](https://visual-heritage.fhstp.ac.at/))”
+
 * 2021.10 - 2022.11: Deep learning Algorithm Engineer
-  * WOODMAN AI, Research department
+  * Research department, WOODMAN AI
   * Inspection based on detection and segmentation method; Generative model; Few-shot learning
 
 * 2020.11 - 2021.04: Image Engineer
-  * Autel Robotics, Camera R & D department
+  * Camera R & D department, Autel Robotics
   * Multispectral Imaging System; UAV Image Algorithm
 
 Publications
@@ -44,7 +50,7 @@ Honor
 
 Skills
 ======
-* Programming Skills: Proficient in C++/C, Python; Basic in SQL, Matlab, Verilog (VHDL)
+* Programming Skills: Proficient in C++/C, Python; Basic in SQL, Matlab
 * Frameworks & Library: Proficient in Pytorch, PaddlePaddle; Basic in TensorFlow, OpenCV.
 * Language: Chinese (Native). English (CEFR: C1, IELTS: 7.0, L:7.5/R:7.5/W:6.5/S:6.0)
 * Others: Work responsibility, cheerful personality and communication skills
