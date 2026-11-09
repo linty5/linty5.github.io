@@ -14,6 +14,9 @@ var breaks = [];
 
 function updateNav() {
 
+  // The refreshed masthead uses a CSS-only navigation instead of #site-nav.
+  if (!$nav.length) return;
+
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
   // The visible list is overflowing the nav

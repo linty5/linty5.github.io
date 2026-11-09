@@ -1,0 +1,91 @@
+/* Typography is inherited from the existing AcademicPages theme. */
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.site-nav a { color: #626a70; }
+.site-nav a:hover { color: #247b91; }
+.site-nav .site-brand { font-weight: 700; font-size: 1rem; white-space: nowrap; }
+.site-nav ul { list-style: none; display: flex; gap: 1.5rem; padding: 0; margin: 0; font-size: .9rem; }
+.site-nav li { margin: 0; }
+.site-nav a[aria-current="page"] { color: #247b91; text-decoration: underline; text-underline-offset: .3em; }
+.profile-site { padding-bottom: 0; margin-bottom: 0 !important; }
+.profile-site .masthead__inner-wrap,
+.profile-site .page__footer footer { max-width: 1080px; }
+.profile-site .page__footer { position: static; margin-top: 4rem; }
+#main.profile-main { max-width: 1080px; margin: 0 auto; padding: 2.2rem 1.4rem 0; }
+.profile-main { color: #494e52; line-height: 1.6; }
+.profile-main a { color: #247b91; text-decoration: none; }
+.profile-main a:hover { color: #175b6d; text-decoration: underline; }
+.profile-main a:focus-visible,
+.profile-main summary:focus-visible { outline: 2px solid #247b91; outline-offset: 4px; }
+.profile-main h1 { margin: 0 0 .4rem; font-size: 1.8rem; line-height: 1.25; }
+.profile-main h2 { margin: 0; font-size: 1.3rem; line-height: 1.4; }
+.profile-main p { margin: 0 0 .9rem; }
+.profile-intro { display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 3rem; align-items: start; }
+.profile-bio h1 span { margin-left: .35rem; font-size: .72em; font-weight: 400; }
+.profile-bio > p { font-size: .94rem; margin-top: .8rem; }
+.profile-portrait { margin: .25rem 0 0; width: 190px; text-align: center; }
+.profile-portrait img { display: block; width: 190px; height: 190px; border-radius: 50%; object-fit: cover; border: 1px solid #e7e9eb; padding: 4px; }
+.profile-portrait figcaption { margin-top: .6rem; font-size: .78rem; font-style: normal; color: #6b747b; }
+.profile-links { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin-top: 1.1rem; font-size: .88rem; }
+.profile-links a { display: inline-flex; align-items: center; gap: .3rem; white-space: nowrap; }
+.profile-links i, .profile-portrait figcaption i { color: #626a70; }
+.profile-section { margin-top: 2.4rem; }
+.profile-section > h2,
+.profile-section-heading { padding-bottom: .6rem; border-bottom: 1px solid #e5e8ea; margin-bottom: .9rem; }
+.profile-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.section-link { font-size: .78rem; white-space: nowrap; }
+.news-list { list-style: none; padding: 0; margin: 0; font-size: .87rem; }
+.news-list li { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: .8rem; margin: 0 0 .55rem; }
+.news-list time { color: #6b747b; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.publication-year { font-size: .86rem; color: #6b747b; font-weight: 500; letter-spacing: .04em; margin: 1.5rem 0 1rem; }
+.publication-row { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 1.6rem; align-items: start; padding: 0 0 1.6rem; margin-bottom: 1.6rem; border-bottom: 1px solid #edf0f1; }
+.publication-row:last-child { margin-bottom: 0; }
+.publication-image { display: flex; align-items: center; justify-content: center; width: 100%; height: 145px; overflow: hidden; border: 1px solid #e8ebed; border-radius: 3px; background: #fcfcfc; }
+.publication-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.publication-info { min-width: 0; }
+.publication-info h4 { margin: -.15rem 0 .3rem; font-size: .98rem; line-height: 1.4; }
+.publication-info h4 a { color: #2f5966; }
+.publication-row--featured .publication-info h4 a { color: #84365f; }
+.publication-info .publication-authors { font-size: .79rem; line-height: 1.5; margin-bottom: .3rem; color: #62696f; }
+.publication-authors strong { color: #494e52; font-weight: 600; }
+.publication-info .publication-venue { margin-bottom: .35rem; font-size: .79rem; font-weight: 600; color: #444e55; }
+.publication-note { font-weight: 400; color: #737b80; font-size: .73rem; }
+.publication-info .publication-award { color: #8b5430; margin-bottom: .3rem; font-size: .76rem; }
+.publication-info .publication-summary { font-size: .8rem; line-height: 1.5; margin-bottom: .45rem; }
+.publication-links { display: flex; flex-wrap: wrap; gap: .25rem .9rem; font-size: .78rem; }
+.publication-links a { border-bottom: 1px solid #bdd9e1; line-height: 1.5; }
+.publication-links a:hover { text-decoration: none; border-bottom-color: currentColor; }
+.profile-page-heading { margin-bottom: 2rem; }
+.profile-page-heading p { margin-top: .7rem; font-size: .9rem; }
+@media (max-width: 767px) {
+  #main.profile-main { padding: 1.7rem 1.25rem 0; }
+  .profile-intro { grid-template-columns: minmax(0, 1fr) 130px; gap: 1.4rem; }
+  .profile-portrait, .profile-portrait img { width: 130px; }
+  .profile-portrait img { height: 130px; }
+  .profile-bio h1 { font-size: 1.65rem; }
+  .profile-bio h1 span { display: block; margin: .3rem 0 0; }
+  .publication-row { grid-template-columns: 190px minmax(0, 1fr); gap: 1.2rem; }
+  .publication-image { height: 130px; }
+}
+@media (max-width: 560px) {
+  .site-nav { align-items: flex-start; flex-direction: column; gap: .8rem; }
+  .site-nav ul { gap: 1.5rem; }
+  .profile-intro { display: flex; flex-direction: column; gap: 1.25rem; }
+  .profile-portrait { order: -1; margin-top: 0; width: auto; text-align: left; }
+  .profile-portrait img { width: 100px; height: 100px; }
+  .profile-portrait figcaption { display: block; white-space: nowrap; }
+  .profile-bio h1 span { display: inline; margin-left: .25rem; }
+  .profile-bio > p { font-size: 1rem; }
+  .profile-links { gap: .5rem 1rem; font-size: .9rem; }
+  .profile-section { margin-top: 2rem; }
+  .profile-section-heading { align-items: center; gap: .5rem; }
+  .section-link { font-size: .73rem; }
+  .news-list { font-size: .9rem; }
+  .news-list li { grid-template-columns: 4rem minmax(0, 1fr); gap: .6rem; }
+  .publication-row { grid-template-columns: 1fr; gap: .9rem; padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
+  .publication-image { height: 180px; max-width: 380px; }
+  .publication-info h4 { font-size: 1.04rem; }
+  .publication-info .publication-authors,
+  .publication-info .publication-venue,
+  .publication-info .publication-summary { font-size: .88rem; }
+  .publication-links { font-size: .87rem; }
+}

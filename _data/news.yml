@@ -1,0 +1,16 @@
+# Dates describe the event/acceptance, not a later proceedings or news publication.
+# Keep all entries visible, in reverse chronological order.
+- date: "2026-08"
+  text: '<a href="#persist">PERSIST</a>, our method for distinguishing true shot boundaries from transient visual changes, was accepted to <strong>BMVC 2026</strong>.'
+- date: "2026-07"
+  text: 'I attended <a href="https://icvss.dmi.unict.it/icvss2026/Posters">ICVSS 2026</a> and presented a poster on intent analysis in historical visual archives.'
+- date: "2025-11"
+  text: 'Our paper on <a href="#few-shot-text-lines">few-shot text line segmentation</a> received the <a href="https://www.acpr2025.com/awards">Best Student Paper Award — Runner-up</a> at ACPR 2025.'
+- date: "2023-11"
+  text: 'I started my doctoral research at CVL, TU Wien.'
+- date: "2023-07"
+  text: '<a href="#hsgan">HSGAN</a>, our work on reconstructing hyperspectral images from RGB images, was accepted to <strong>IEEE TNNLS</strong>.'
+- date: "2020-11"
+  text: '<a href="#legacy-photo-editing">Legacy Photo Editing with Learned Noise Prior</a> was accepted to <strong>WACV 2021</strong> as an oral presentation.'
+- date: "2020-05"
+  text: 'Our team won <strong>first place</strong> in the NTIRE 2020 challenge on hyperspectral reconstruction from RGB images.'

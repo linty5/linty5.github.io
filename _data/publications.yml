@@ -1,0 +1,192 @@
+# Conference entries use the conference year; journal entries use their final volume year.
+# The shared template sorts years descending, with Tingyu-first-author papers first within each year.
+- id: persist
+  title: "PERSIST: Persistent-State Discrimination for Shot Boundary Detection"
+  authors: [Tingyu Lin, Christian Stippel, Armin Dadras, Jakob Zenzmaier, Florian Kleber, Wolfgang Aigner, Robert Sablatnig]
+  venue: BMVC
+  year: 2026
+  type: paper
+  featured: true
+  summary: "Distinguishing persistent shot changes from transient visual disruptions in historical and modern video."
+  image: /images/publications/persist.webp
+  image_version: "f3f39118a6e4"
+  alt: "The complete PERSIST architecture beside its real gradual-transition example."
+  paper: https://arxiv.org/abs/2608.29287
+  code: https://github.com/linty5/PERSIST
+
+- id: clappertext
+  title: "ClapperText: A Benchmark for Text Recognition in Low-Resource Archival Documents"
+  authors: [Tingyu Lin, Marco Peer, Florian Kleber, Robert Sablatnig]
+  venue: ICDAR Workshops · DALL
+  year: 2025
+  publication_year: 2026
+  type: paper
+  summary: "A benchmark for detecting and reading handwritten and printed text in degraded archival footage."
+  image: /images/publications/clappertext.webp
+  image_version: "634c6bc5d2c1"
+  alt: "The published expert-assisted ClapperText annotation workflow above real annotated footage and word crops."
+  paper: https://doi.org/10.1007/978-3-032-09371-4_20
+  code: https://github.com/linty5/ClapperText
+  data: https://doi.org/10.5281/zenodo.17366964
+
+- id: few-shot-text-lines
+  title: Few-Shot Connectivity-Aware Text Line Segmentation in Historical Documents
+  authors: [Rafael Sterzinger, Tingyu Lin, Robert Sablatnig]
+  venue: ACPR
+  year: 2025
+  publication_year: 2026
+  type: paper
+  award: Best Student Paper Award — Runner-up
+  summary: "Text line segmentation from only a few annotated manuscript pages, using a compact network and connectivity-aware loss."
+  image: /images/publications/few-shot-text-lines.webp
+  image_version: "6783e5f23fe4"
+  alt: "A segmented manuscript page with ground-truth lines and a connectivity-aware error illustration."
+  paper: https://arxiv.org/abs/2508.19162
+  code: https://github.com/RafaelSterzinger/acpr_few_shot_hist
+
+- id: dgme-t
+  title: "DGME-T: Directional Grid Motion Encoding for Transformer-Based Historical Camera Movement Classification"
+  authors: [Tingyu Lin, Armin Dadras, Florian Kleber, Robert Sablatnig]
+  venue: ACM Multimedia Workshops · SUMAC
+  year: 2025
+  type: paper
+  summary: "Combining directional motion descriptors with video transformers to classify camera movement in archival films."
+  image: /images/publications/dgme-t.webp
+  image_version: "7aa3799c6e35"
+  alt: "Historical input frames beside the published DGME-T encoding, backbone and fusion architecture."
+  paper: https://arxiv.org/abs/2510.15725
+  code: https://github.com/linty5/DGME-T
+
+- id: rule-of-thirds
+  title: Rule-of-Thirds Detection with Interpretable Geometric Features
+  authors: [Armin Dadras, Tingyu Lin, Robert Sablatnig, Markus Seidl]
+  venue: ACM Multimedia Workshops · SUMAC
+  year: 2025
+  type: paper
+  summary: "Interpretable features relate detected subjects and their geometry to the rule-of-thirds grid."
+  image: /images/publications/rule-of-thirds.webp
+  image_version: "46307bd3e49d"
+  alt: "The published rule-of-thirds pipeline and its bird example’s geometric feature abstractions."
+  paper: https://doi.org/10.1145/3746273.3760202
+  code: https://github.com/ADadras/Rule-of-Thirds-Detection-with-Interpretable-Geometric-Features
+
+- id: camera-movement-study
+  title: "Camera Movement Classification in Historical Footage: A Comparative Study of Deep Video Models"
+  authors: [Tingyu Lin, Armin Dadras, Florian Kleber, Robert Sablatnig]
+  venue: AIRoV
+  year: 2025
+  type: paper
+  homepage: false
+  summary: "Comparing five deep video models for camera movement classification on historical footage."
+  image: /images/publications/camera-movement-study.webp
+  image_version: "861bc2e0acf2"
+  alt: "Three frames from the paper track example with the corresponding published subject masks."
+  paper: https://arxiv.org/abs/2510.14713
+
+- id: composition-retrieval
+  title: Enhancing Historical Image Retrieval with Compositional Cues
+  authors: [Tingyu Lin, Robert Sablatnig]
+  venue: AIRoV
+  year: 2024
+  publication_year: 2025
+  type: paper
+  summary: "Combining image composition and visual content to retrieve related images from historical collections."
+  image: /images/publications/composition-retrieval.webp
+  image_version: "0817c500d429"
+  alt: "The published CCNet and CBIRNet architecture beside an image and its composition map."
+  paper: https://arxiv.org/abs/2403.14287
+  code: https://github.com/linty5/CCBIR
+
+- id: hsgan
+  title: "HSGAN: Hyperspectral Reconstruction From RGB Images With Generative Adversarial Network"
+  authors: [Yuzhi Zhao, Lai-Man Po, Tingyu Lin, Qiong Yan, Wei Liu, Pengfei Xian]
+  venue: IEEE Transactions on Neural Networks and Learning Systems
+  year: 2024
+  type: paper
+  summary: "Reconstructing hyperspectral information from RGB images with a generative adversarial model."
+  image: /images/publications/hsgan.webp
+  image_version: "96d7f8a42a2c"
+  alt: "The HSGAN multiscale generator and its adversarial training diagram, reproduced from the paper."
+  paper: https://zhaoyuzhi.github.io/files/2023-HSGAN-Hyperspectral-Reconstruction-From-RGB-Images-With-Generative-Adversarial-Network.pdf
+  code: https://github.com/zhaoyuzhi/HSGAN
+
+- id: legacy-photo-editing
+  title: Legacy Photo Editing with Learned Noise Prior
+  authors: [Yuzhi Zhao, Lai-Man Po, Tingyu Lin, Xuehui Wang, Kangcheng Liu, Yujia Zhang, Wing Yin Yu, Pengfei Xian, Jingjing Xiong]
+  venue: WACV · Oral
+  year: 2021
+  type: paper
+  summary: "Restoring degraded legacy photographs using a learned noise prior."
+  image: /images/publications/legacy-photo-editing.webp
+  image_version: "1f4e12a00a0f"
+  alt: "The NEGAN and IEGAN training pipeline above three published edited legacy photographs."
+  paper: https://openaccess.thecvf.com/content/WACV2021/html/Zhao_Legacy_Photo_Editing_With_Learned_Noise_Prior_WACV_2021_paper.html
+  code: https://github.com/zhaoyuzhi/Legacy-Photo-Editing-with-Learned-Noise-Prior
+
+- id: hrnet
+  title: Hierarchical Regression Network for Spectral Reconstruction from RGB Images
+  authors: [Yuzhi Zhao, Lai-Man Po, Qiong Yan, Wei Liu, Tingyu Lin]
+  venue: CVPR Workshops · NTIRE
+  year: 2020
+  type: paper
+  summary: "A hierarchical regression network for reconstructing spectral bands from RGB images."
+  image: /images/publications/hrnet.webp
+  image_version: "d663df802f26"
+  alt: "The published HRNet four-level hierarchical regression architecture."
+  paper: https://openaccess.thecvf.com/content_CVPRW_2020/html/w31/Zhao_Hierarchical_Regression_Network_for_Spectral_Reconstruction_From_RGB_Images_CVPRW_2020_paper.html
+  code: https://github.com/zhaoyuzhi/Hierarchical-Regression-Network-for-Spectral-Reconstruction-from-RGB-Images
+  poster: https://github.com/zhaoyuzhi/Hierarchical-Regression-Network-for-Spectral-Reconstruction-from-RGB-Images/blob/master/img/poster.png
+
+- id: mutual-gaze
+  title: A Robust and Efficient Framework for Inferring Mutual Gaze in Historical Video Data
+  authors: [Tingyu Lin, Christian Stippel, Florian Kleber, Robert Sablatnig]
+  venue: Computer Vision Winter Workshop · Conference presentation
+  year: 2025
+  type: presentation
+  summary: "A framework for analysing mutual gaze in historical video."
+  image: /images/publications/mutual-gaze.webp
+  image_version: "7e8d0e8cde3e"
+  alt: "Detection boxes, head orientation, and mutual-gaze predictions for two people in archival footage."
+  paper: https://repositum.tuwien.at/handle/20.500.12708/221892
+
+- id: codescope
+  title: "CodeScope: An Execution-based Multilingual Multitask Multidimensional Benchmark for Evaluating LLMs on Code Understanding and Generation"
+  authors: ["Weixiang Yan", "Haitian Liu", "Yunkun Wang", "Yunzhe Li", "Qian Chen", "Wen Wang", "Tingyu Lin", "Weishan Zhao", "Li Zhu", "Hari Sundaram", "Shuiguang Deng"]
+  venue: "ACL"
+  year: 2024
+  paper: "https://aclanthology.org/2024.acl-long.301/"
+  type: "paper"
+  summary: "An execution-based benchmark for evaluating multilingual code understanding and generation by large language models."
+  code: "https://github.com/WeixiangYAN/CodeScope"
+  image: "/images/publications/codescope.webp"
+  image_version: "0854ebdd83fe"
+  project: "https://haitianliu22.github.io/code-scope-benchmark/"
+  alt: "CodeScope Figure 2: the published workflow for program synthesis, code translation, code repair and code optimization."
+
+- id: grounding-composition
+  title: "Grounding Image Composition with Label-Conditioned Visual Evidence"
+  authors: ["Armin Dadras", "Tingyu Lin", "Robert Sablatnig", "Franziska Proksa", "Markus Seidl"]
+  venue: "WACV"
+  year: 2027
+  paper: "https://arxiv.org/abs/2610.41080"
+  type: "paper"
+  summary: "A label-conditioned benchmark linking photographic composition labels to human-annotated visual evidence."
+  code: "https://github.com/ADadras/ku-pcpe"
+  project: "https://adadras.github.io/KU-PCPE/"
+  image: "/images/publications/grounding-composition.webp"
+  image_version: "c2481402cc74"
+  alt: "Three matched original-photo and aligned-human-evidence pairs for center, diagonal and pattern composition."
+
+- id: ntire-2020-spectral-challenge
+  title: "NTIRE 2020 Challenge on Spectral Reconstruction from an RGB Image"
+  authors: ["Boaz Arad", "Radu Timofte", "Ohad Ben-Shahar", "Yi-Tun Lin", "Graham Finlayson", "Shai Givati", "Jiaojiao Li", "Chaoxiong Wu", "Rui Song", "Yunsong Li", "Fei Liu", "Zhiqiang Lang", "Wei Wei", "Lei Zhang", "Jiangtao Nie", "Yuzhi Zhao", "Lai-Man Po", "Qiong Yan", "Wei Liu", "Tingyu Lin", "Youngjung Kim", "Changyeop Shin", "Kyeongha Rho", "Sungho Kim", "Zhiyu Zhu", "Junhui Hou", "He Sun", "Jinchang Ren", "Zhenyu Fang", "Yijun Yan", "Hao Peng", "Xiaomei Chen", "Jie Zhao", "Tarek Stiebel", "Simon Koppers", "Dorit Merhof", "Honey Gupta", "Kaushik Mitra", "Biebele Joslyn Fubara", "Mohamed Sedky", "Dave Dyke", "Atmadeep Banerjee", "Akash Palrecha", "Sabarinathan", "K. Uma", "D. Synthiya Vinothini", "B. Sathya Bama", "S. M. Md Mansoor Roomi"]
+  venue: "CVPR Workshops · NTIRE"
+  year: 2020
+  paper: "https://doi.org/10.1109/CVPRW50498.2020.00231"
+  type: "paper"
+  summary: "The NTIRE 2020 challenge overview for spectral reconstruction from RGB images, including competing methods and benchmark results."
+  homepage: false
+  image: "/images/publications/ntire-2020-spectral-challenge.webp"
+  image_version: "fd66734f3b96"
+  alt: "Original NTIRE 2020 Figure 1: sixteen sample scenes from the ARAD hyperspectral dataset."
+  display_authors: ["Boaz Arad", "Radu Timofte", "Ohad Ben-Shahar", "…", "Tingyu Lin", "et al."]

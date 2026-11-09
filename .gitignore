@@ -1,2 +1,10 @@
 _site/
 
+# Local Jekyll and browser preview artifacts.
+.bundle/
+.jekyll-cache/
+.sass-cache/
+.tools/
+
+# Local research notes, source images and thumbnail review tools.
+/tools/

@@ -10,8 +10,8 @@ locale                   : "en-US"
 title                    : "Tingyu LIN (林莛庾)"
 title_separator          : "-"
 name                     : &name "Tingyu LIN"
-description              : &description "personal description"
-url                      : https://linty5.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description              : &description "Tingyu Lin — video analysis and understanding, TU Wien."
+url                      : https://linty5.github.io # production URL; local preview overrides this
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "linty5/linty5.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -19,7 +19,6 @@ breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -73,7 +72,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false
   google:
     tracking_id          :
 
@@ -82,11 +81,11 @@ analytics:
 author:
   name             : "Tingyu LIN"
   avatar           : "tingyu_lin.png"
-  bio              : "Predoctoral Researcher@TUW, BEng@SYSU, MSc@CityU"
+  bio              : "PhD candidate at TU Wien"
   location         : "Vienna, Austria"
   employer         :
   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "https://scholar.google.com/citations?user=QyVVPMoAAAAJ&hl=en&oi=ao)"
+  googlescholar    : "https://scholar.google.com/citations?user=QyVVPMoAAAAJ"
   email            : tingyu.lin@tuwien.ac.at
   # researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -123,6 +122,9 @@ include:
   - _pages
   - files
 exclude:
+  - .tools
+  - tools
+  - _posts
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -173,77 +175,14 @@ kramdown:
   enable_coderay: false
 
 
-# Collections
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-
-# Defaults
+# Page defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: false
-      comments: true
-      share: true
-      related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 # Sass/SCSS
 sass:
@@ -255,7 +194,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Vienna
 
 
 # Plugins
