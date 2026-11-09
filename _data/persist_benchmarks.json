@@ -1,0 +1,186 @@
+{
+  "metric": "F1",
+  "protocol": "Threshold 0.5",
+  "datasets": [
+    {
+      "label": "ClipShots",
+      "name": "ClipShots"
+    },
+    {
+      "label": "BBC",
+      "name": "BBC Planet Earth"
+    },
+    {
+      "label": "AutoShot",
+      "name": "AutoShot / SHOT"
+    },
+    {
+      "label": "HIST-GST12",
+      "name": "HISTORIAN-GST12"
+    }
+  ],
+  "rows": [
+    {
+      "id": "pixel_difference",
+      "label": "Pixel difference",
+      "ours": false,
+      "cells": [
+        {
+          "value": "0.0351",
+          "best": false
+        },
+        {
+          "value": "0.0074",
+          "best": false
+        },
+        {
+          "value": "0.0683",
+          "best": false
+        },
+        {
+          "value": "0.0000",
+          "best": false
+        }
+      ]
+    },
+    {
+      "id": "hsv_histogram",
+      "label": "HSV histogram",
+      "ours": false,
+      "cells": [
+        {
+          "value": "0.5737",
+          "best": false
+        },
+        {
+          "value": "0.7786",
+          "best": false
+        },
+        {
+          "value": "0.6792",
+          "best": false
+        },
+        {
+          "value": "0.1544",
+          "best": false
+        }
+      ]
+    },
+    {
+      "id": "edge_change_ratio",
+      "label": "Edge change ratio",
+      "ours": false,
+      "cells": [
+        {
+          "value": "0.3510",
+          "best": false
+        },
+        {
+          "value": "0.5552",
+          "best": false
+        },
+        {
+          "value": "0.3505",
+          "best": false
+        },
+        {
+          "value": "0.6019",
+          "best": false
+        }
+      ]
+    },
+    {
+      "id": "deepsbd_alexnet",
+      "label": "DeepSBD \u00b7 AlexNet",
+      "ours": false,
+      "cells": [
+        {
+          "value": "0.6843",
+          "best": false
+        },
+        {
+          "value": "0.8202",
+          "best": false
+        },
+        {
+          "value": "0.7539",
+          "best": false
+        },
+        {
+          "value": "0.8535",
+          "best": false
+        }
+      ]
+    },
+    {
+      "id": "deepsbd_resnet18",
+      "label": "DeepSBD \u00b7 ResNet18",
+      "ours": false,
+      "cells": [
+        {
+          "value": "0.7555",
+          "best": false
+        },
+        {
+          "value": "0.8622",
+          "best": false
+        },
+        {
+          "value": "0.7303",
+          "best": false
+        },
+        {
+          "value": "0.8611",
+          "best": false
+        }
+      ]
+    },
+    {
+      "id": "transnetv2_public",
+      "label": "TransNetV2",
+      "ours": false,
+      "cells": [
+        {
+          "value": "0.7793",
+          "best": false
+        },
+        {
+          "value": "0.9611",
+          "best": false
+        },
+        {
+          "value": "0.7993",
+          "best": true
+        },
+        {
+          "value": "0.9204",
+          "best": false
+        }
+      ]
+    },
+    {
+      "id": "persist_ensemble",
+      "label": "PERSIST",
+      "ours": true,
+      "cells": [
+        {
+          "value": "0.8023",
+          "best": true
+        },
+        {
+          "value": "0.9700",
+          "best": true
+        },
+        {
+          "value": "0.7953",
+          "best": false
+        },
+        {
+          "value": "0.9264",
+          "best": true
+        }
+      ]
+    }
+  ],
+  "source": "https://arxiv.org/abs/2608.29287"
+}

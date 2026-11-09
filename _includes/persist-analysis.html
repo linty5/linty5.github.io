@@ -1,0 +1,22 @@
+{% assign analysis_modules = site.data.persist_analysis | where: "selected", true %}
+{% if analysis_modules.size > 0 %}
+<section id="analysis" class="persist-section persist-analysis" aria-labelledby="persist-analysis-title">
+  <div class="persist-section-heading"><p class="persist-eyebrow">A closer look</p><h2 id="persist-analysis-title">From false alarms to frame-level decisions.</h2><p>Compare the detections, then follow the evidence through two video examples.</p></div>
+  <div class="persist-analysis-grid">
+    {% for module in analysis_modules %}
+    <article class="persist-analysis-module" id="analysis-{{ module.id }}" data-module="{{ module.id }}">
+      <div class="persist-analysis-copy">
+        <p class="persist-eyebrow">{{ module.kicker }}</p>
+        <h3>{{ module.title }}</h3>
+        <p class="persist-analysis-summary">{{ module.summary }}</p>
+      </div>
+      <figure class="persist-result-figure">
+        <a class="persist-analysis-visual" href="{{ module.full_image | default: module.image | relative_url }}" aria-label="Enlarge {{ module.title | escape }}"><img src="{{ module.image | relative_url }}" width="960" height="600" loading="lazy" decoding="async" alt="{{ module.alt | escape }}"></a>
+        <figcaption>{{ module.caption }}</figcaption>
+      </figure>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="persist-analysis-reference"><a href="https://arxiv.org/abs/2608.29287">Further analysis in the paper and supplementary material ↗</a></p>
+</section>
+{% endif %}

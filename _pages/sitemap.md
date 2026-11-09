@@ -10,4 +10,5 @@ body_class: profile-site
   <li><a href="{{ '/' | relative_url }}">Tingyu Lin — Homepage</a></li>
   <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
   <li><a href="{{ '/cv/' | relative_url }}">CV and work experience</a></li>
+  <li><a href="{{ '/projects/persist/' | relative_url }}">PERSIST project page</a></li>
 </ul>

@@ -1,5 +1,5 @@
 {% assign works = site.data.publications | where: "type", include.kind %}
-{% assign year_groups = works | group_by: "year" | sort: "name" | reverse %}
+{% assign year_groups = works | group_by_exp: "work", "work.display_year | default: work.year" | sort: "name" | reverse %}
 <div class="publication-list">
   {% for year_group in year_groups %}
     {% assign year_works = year_group.items %}
@@ -13,7 +13,7 @@
       <h3 class="publication-year">{{ year_group.name }}</h3>
     {% endif %}
     {% for work in ordered_works %}
-    <article class="publication-row{% if work.featured %} publication-row--featured{% endif %}" id="{{ work.id }}">
+    <article class="publication-row" id="{{ work.id }}">
       {% assign primary_link = work.project | default: work.paper %}
       {% unless primary_link contains '://' %}{% assign primary_link = primary_link | relative_url %}{% endunless %}
       <a class="publication-image" href="{{ primary_link }}" aria-label="{{ work.title | escape }}">

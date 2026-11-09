@@ -1,0 +1,67 @@
+/* Shared reading styles; retain each page's font family, sizes and spacing. */
+:root {
+  --type-ink: #343a40;
+  --type-muted: #525a62;
+  --type-project-ink: #27242a;
+  --type-project-muted: #57525d;
+  --type-key-ink: #474049;
+  --type-link: #247b91;
+  --type-body-weight: 450;
+  --type-small-weight: 450;
+  --type-nav-weight: 500;
+  --type-heading-weight: 700;
+  --type-subhead-weight: 675;
+  --type-stroke: .10px;
+}
+
+body {
+  color: var(--type-ink);
+  font-weight: var(--type-body-weight);
+  -webkit-text-stroke: var(--type-stroke) currentColor;
+}
+body :is(.fa, .fas, .far, .fab, .fal, .ai),
+body :is(code, pre) { -webkit-text-stroke: 0; }
+body :is(h1, h2, h3, h4, h5, h6) { font-weight: var(--type-heading-weight); }
+
+.profile-main, .archive { color: var(--type-ink); }
+.profile-main a, .archive a, .sidebar a { color: var(--type-link); }
+.profile-bio h1 span { font-weight: var(--type-body-weight); }
+.site-nav a,
+.profile-links i,
+.profile-portrait figcaption,
+.profile-portrait figcaption i,
+.news-list time,
+.publication-year,
+.publication-info .publication-authors,
+.publication-info .publication-note,
+.page__footer,
+.sidebar .author__bio,
+.sidebar .author__urls { color: var(--type-muted); }
+.site-nav ul, .profile-links, .publication-links,
+.section-link { font-weight: var(--type-nav-weight); }
+.site-nav a:hover { color: var(--type-link); }
+.publication-info h4 a { color: #2f5966; }
+.publication-info .publication-venue,
+.publication-authors strong { color: var(--type-ink); }
+.publication-info .publication-note { font-weight: var(--type-small-weight); }
+.publication-year { font-weight: var(--type-nav-weight); }
+.page__footer, .profile-portrait figcaption,
+.news-list time { font-weight: var(--type-small-weight); }
+
+body.persist-project {
+  --persist-ink: var(--type-project-ink);
+  --persist-muted: var(--type-project-muted);
+  color: var(--persist-ink);
+}
+body.persist-project :is(h2, h3, h4) { font-weight: var(--type-subhead-weight); }
+body.persist-project .persist-hero h1 { font-weight: var(--type-heading-weight); }
+.persist-project .persist-key-points { color: var(--type-key-ink); }
+.persist-project .persist-evidence-caption strong { color: var(--type-key-ink); }
+.persist-project .persist-nav { font-weight: var(--type-nav-weight); }
+.persist-project .persist-scene-number { color: var(--persist-muted); }
+.persist-project :is(figcaption, .persist-affiliations, .persist-footer,
+  .persist-chart-intro, .persist-analysis-summary, .persist-note,
+  .persist-method-note, .persist-chart-legend, .persist-score-legend,
+  .persist-evidence-caption, .persist-analysis-reference) { font-weight: var(--type-small-weight); }
+.persist-project .persist-benchmark-table tbody th { font-weight: var(--type-body-weight); }
+.persist-project .persist-benchmark-table .is-persist th { font-weight: 650; }

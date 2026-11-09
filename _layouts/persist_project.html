@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | escape }}</title>
+    <meta name="description" content="{{ page.description | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:description" content="{{ page.description | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/images/projects/persist/teaser.png' | absolute_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#843664">
+    <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}?v=fish">
+    <link rel="stylesheet" href="{{ '/assets/css/persist-project.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/typography.css' | relative_url }}">
+  </head>
+  <body class="persist-project">
+    <a class="persist-skip-link" href="#main">Skip to content</a>
+    <nav class="persist-nav persist-container" aria-label="Project navigation">
+      <a class="persist-home" href="{{ '/' | relative_url }}"><span aria-hidden="true">←</span> Tingyu Lin</a>
+      <div class="persist-nav-links">
+        <a href="#examples">Examples</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        {% assign selected_analysis = site.data.persist_analysis | where: "selected", true %}
+        {% if selected_analysis.size > 0 %}<a href="#analysis">Analysis</a>{% endif %}
+        <a href="#citation">Citation</a>
+      </div>
+    </nav>
+    <main id="main" class="persist-container">
+      {{ content }}
+    </main>
+    <footer class="persist-footer persist-container">
+      <p>This research was funded in whole or in part by the Austrian Science Fund (FWF)
+        [<a href="https://doi.org/10.55776/DFH37">10.55776/DFH37</a>], doc.funds.connect
+        “Visual Heritage: Visual Analytics and Computer Vision Meet Cultural Heritage”.</p>
+      <div class="persist-footer-bottom">
+        <a href="{{ '/' | relative_url }}">Back to Tingyu Lin’s homepage</a>
+        <p>PERSIST · BMVC 2026</p>
+      </div>
+    </footer>
+    <script src="{{ '/assets/js/persist-project.js' | relative_url }}" defer></script>
+    <script>
+      (function () {
+        var button = document.getElementById('persist-copy-citation');
+        var citation = document.getElementById('persist-bibtex');
+        var status = document.getElementById('persist-copy-status');
+        if (!button || !citation || !status) return;
+        button.hidden = false;
+        button.addEventListener('click', async function () {
+          try {
+            if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+            await navigator.clipboard.writeText(citation.textContent.trim());
+            status.textContent = 'BibTeX copied to clipboard.';
+          } catch (error) {
+            var selection = window.getSelection();
+            var range = document.createRange();
+            range.selectNodeContents(citation);
+            selection.removeAllRanges();
+            selection.addRange(range);
+            status.textContent = 'Citation selected. Press Ctrl+C or ⌘C to copy.';
+          }
+        });
+      }());
+    </script>
+  </body>
+</html>

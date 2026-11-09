@@ -1,4 +1,5 @@
 /* Typography is inherited from the existing AcademicPages theme. */
+#main, .masthead__inner-wrap, .page__footer footer { max-width: 1152px; }
 .site-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .site-nav a { color: #626a70; }
 .site-nav a:hover { color: #247b91; }
@@ -8,9 +9,9 @@
 .site-nav a[aria-current="page"] { color: #247b91; text-decoration: underline; text-underline-offset: .3em; }
 .profile-site { padding-bottom: 0; margin-bottom: 0 !important; }
 .profile-site .masthead__inner-wrap,
-.profile-site .page__footer footer { max-width: 1080px; }
+.profile-site .page__footer footer { max-width: 972px; }
 .profile-site .page__footer { position: static; margin-top: 4rem; }
-#main.profile-main { max-width: 1080px; margin: 0 auto; padding: 2.2rem 1.4rem 0; }
+#main.profile-main { max-width: 972px; margin: 0 auto; padding: 2.2rem 1.4rem 0; }
 .profile-main { color: #494e52; line-height: 1.6; }
 .profile-main a { color: #247b91; text-decoration: none; }
 .profile-main a:hover { color: #175b6d; text-decoration: underline; }
@@ -44,7 +45,6 @@
 .publication-info { min-width: 0; }
 .publication-info h4 { margin: -.15rem 0 .3rem; font-size: .98rem; line-height: 1.4; }
 .publication-info h4 a { color: #2f5966; }
-.publication-row--featured .publication-info h4 a { color: #84365f; }
 .publication-info .publication-authors { font-size: .79rem; line-height: 1.5; margin-bottom: .3rem; color: #62696f; }
 .publication-authors strong { color: #494e52; font-weight: 600; }
 .publication-info .publication-venue { margin-bottom: .35rem; font-size: .79rem; font-weight: 600; color: #444e55; }

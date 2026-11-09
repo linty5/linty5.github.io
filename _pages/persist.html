@@ -1,0 +1,152 @@
+---
+layout: persist_project
+title: "PERSIST: Persistent-State Discrimination for Shot Boundary Detection"
+description: "Explore how PERSIST separates real shot boundaries from camera shake and flicker, with video examples and synchronised model scores. BMVC 2026."
+permalink: /projects/persist/
+---
+
+<header class="persist-hero">
+  <p class="persist-venue">BMVC 2026</p>
+  <h1><span class="persist-name">PERSIST</span><span class="persist-title">Persistent-State Discrimination<br class="persist-wide-break"> for Shot Boundary Detection</span></h1>
+  <p class="persist-authors">
+    <span><a href="{{ '/' | relative_url }}">Tingyu Lin</a><sup>1</sup>,</span>
+    <span>Christian Stippel<sup>1</sup>,</span>
+    <span>Armin Dadras<sup>1,2</sup>,</span>
+    <span>Jakob Zenzmaier<sup>3</sup>,</span>
+    <span>Florian Kleber<sup>1</sup>,</span>
+    <span>Wolfgang Aigner<sup>2</sup>,</span>
+    <span>Robert Sablatnig<sup>1</sup></span>
+  </p>
+  <div class="persist-affiliations">
+    <p><sup>1</sup> Computer Vision Lab, TU Wien</p>
+    <p><sup>2</sup> Institute of Creative\Media/Technologies, St. Pölten University of Applied Sciences</p>
+    <p><sup>3</sup> Ludwig Boltzmann Institute for Digital History</p>
+  </div>
+  <div class="persist-resources" aria-label="Research resources">
+    <a class="persist-button persist-button-primary" href="https://arxiv.org/abs/2608.29287">Paper <span aria-hidden="true">↗</span></a>
+    <a class="persist-button" href="https://github.com/linty5/PERSIST">Code <span aria-hidden="true">↗</span></a>
+    <a class="persist-button" href="{{ '/files/persist/PERSIST_BMVC2026_eposter.pdf' | relative_url }}" type="application/pdf">Poster <span class="persist-button-detail">PDF</span></a>
+  </div>
+  <ul class="persist-key-points">
+    <li>A sudden change alone does not mean a new shot: what separates a true boundary from a pseudo-event is whether the change lasts.</li>
+    <li>By testing this, PERSIST roughly halves the pseudo-event false alarms of TransNetV2 at the same recall and stays highly competitive on four benchmarks.</li>
+  </ul>
+</header>
+
+<section id="examples" class="persist-examples" aria-labelledby="examples-title" data-manifest="{{ '/assets/data/persist-examples.json' | relative_url }}">
+  <div class="persist-section-heading persist-examples-heading">
+    <div><p class="persist-eyebrow">The difference is in what follows</p><h2 id="examples-title">See what persists.</h2></div>
+    <div class="persist-carousel-actions" hidden>
+      <button id="persist-previous" class="persist-icon-button" type="button" aria-label="Previous example"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+      <button id="persist-play" class="persist-play" type="button" aria-label="Pause automatic playback"><span class="persist-play-icon" aria-hidden="true"></span><span class="persist-play-label">Pause</span></button>
+      <button id="persist-next" class="persist-icon-button" type="button" aria-label="Next example"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <div id="persist-carousel" class="persist-carousel" role="region" aria-roledescription="carousel" aria-label="Four video examples">
+    <div class="persist-carousel-window">
+      <div id="persist-carousel-track" class="persist-carousel-track">
+        {% assign case_ids = 'hard-cut,gradual,camera-shake,flicker' | split: ',' %}
+        {% for case_id in case_ids %}
+          {% case case_id %}
+            {% when 'hard-cut' %}{% assign case_label = 'Hard cut' %}{% assign case_kind = 'New shot' %}{% assign case_note = 'A sudden change that lasts. Both models recognise the boundary.' %}
+            {% when 'gradual' %}{% assign case_label = 'Gradual transition' %}{% assign case_kind = 'New shot' %}{% assign case_note = 'One shot gives way to another. The change unfolds over several frames.' %}
+            {% when 'camera-shake' %}{% assign case_label = 'Camera shake' %}{% assign case_kind = 'Same shot' %}{% assign case_note = 'The camera moves, but the shot continues. PERSIST keeps the score low.' %}
+            {% when 'flicker' %}{% assign case_label = 'Flicker' %}{% assign case_kind = 'Same shot' %}{% assign case_note = 'The light changes briefly. The scene returns without a new shot.' %}
+          {% endcase %}
+          <article class="persist-scene" data-scene="{{ case_id }}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} of 4: {{ case_label }}">
+            <div class="persist-scene-heading">
+              <div><span class="persist-scene-number" aria-hidden="true">0{{ forloop.index }}</span><h3>{{ case_label }}</h3><span class="persist-scene-kind{% if case_kind == 'Same shot' %} is-disturbance{% endif %}">{{ case_kind }}</span></div>
+              <p>{{ case_note }}</p>
+            </div>
+            <div class="persist-evidence-grid">
+              <figure class="persist-clip">
+                <div class="persist-video-well"><video class="persist-example-video" controls muted playsinline preload="metadata" poster="{{ '/images/projects/persist/motion/' | append: case_id | append: '.jpg' | relative_url }}" width="128" height="128" aria-label="{{ case_label }} video"><source src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.webm' | relative_url }}" type='video/webm; codecs="vp9"'><source src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.mp4' | relative_url }}" type="video/mp4">Your browser does not support video playback.</video></div>
+                <figcaption>ClipShots · evaluation excerpt</figcaption>
+              </figure>
+              <div class="persist-score-panel" hidden>
+                <div class="persist-score-heading"><h4>Boundary score</h4><span class="persist-gt-key"><i aria-hidden="true"></i> True transition</span></div>
+                <div class="persist-score-legend" aria-label="Score curves"><span class="persist-legend-model">PERSIST</span><span class="persist-legend-baseline">Cue-only baseline</span></div>
+                <canvas class="persist-scores" width="700" height="280" role="img" aria-label="Recorded boundary scores for {{ case_label }}"></canvas>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+    <div id="persist-player-controls" class="persist-player-controls" hidden>
+      <span id="persist-playback-state" class="persist-playback-state">Auto-playing</span>
+      <label for="persist-seek" class="persist-sr-only">Position in current example</label><input id="persist-seek" type="range" min="0" max="140" step="1" value="0" aria-valuetext="First frame">
+      <output id="persist-frame" for="persist-seek">Frame 666</output>
+    </div>
+    <div class="persist-case-nav" aria-label="Select an example" hidden>
+      {% assign case_labels = 'Hard cut,Gradual transition,Camera shake,Flicker' | split: ',' %}
+      {% for case_id in case_ids %}
+        <button class="persist-case" type="button" data-case="{{ case_id }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="Show {{ case_labels[forloop.index0] }}">
+          <img src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.jpg' | relative_url }}" width="44" height="44" alt="" loading="lazy">
+          <span><span class="persist-case-index">0{{ forloop.index }}</span><span class="persist-case-label">{{ case_labels[forloop.index0] }}</span></span><i class="persist-case-progress" aria-hidden="true"></i>
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+  <a id="persist-score-fallback" href="{{ '/images/projects/persist/teaser.png' | relative_url }}"><img src="{{ '/images/projects/persist/teaser.png' | relative_url }}" width="6224" height="2102" alt="The original figure compares four real clips and their recorded boundary scores."></a>
+  <p id="persist-example-status" class="persist-example-status" role="status"></p>
+  <p class="persist-evidence-caption">Real clips with recorded frame scores. The <strong>cue-only baseline</strong> uses the same backbone and training setup. <a href="{{ '/images/projects/persist/teaser.png' | relative_url }}">Original figure ↗</a></p>
+  <noscript><p class="persist-note">The first video and original comparison figure are available above. Enable JavaScript for automatic playback of all four examples and synchronised scores.</p></noscript>
+</section>
+
+<section id="method" class="persist-section" aria-labelledby="persist-method-title">
+  <div class="persist-section-heading"><p class="persist-eyebrow">How it works</p><h2 id="persist-method-title">Learning a persistence criterion.</h2><p>Local change provides evidence. A continuous latent state helps distinguish lasting transitions from changes that soon return.</p></div>
+  <figure class="persist-method-film">
+    <div class="persist-method-screen">
+      <video id="persist-method-video" controls muted loop playsinline preload="metadata" poster="{{ '/images/projects/persist/presentation/method-walkthrough-poster.jpg' | relative_url }}" width="1280" height="720" aria-label="PERSIST method animation"><source src="{{ '/images/projects/persist/presentation/method-walkthrough.webm' | relative_url }}" type='video/webm; codecs="vp9"'><source src="{{ '/images/projects/persist/presentation/method-walkthrough.mp4' | relative_url }}" type="video/mp4">Your browser does not support video playback. <a href="{{ '/images/projects/persist/method.png' | relative_url }}">View the full architecture.</a></video>
+    </div>
+    <figcaption><a href="{{ '/images/projects/persist/method.png' | relative_url }}">Full architecture ↗</a></figcaption>
+  </figure>
+  <p class="persist-method-note">During training, PERSIST learns whether a visual change lasts or the video returns to its earlier appearance. This helps it distinguish new shots from brief disturbances.</p>
+</section>
+
+<section id="results" class="persist-section persist-results" aria-labelledby="persist-results-title">
+  <div class="persist-section-heading"><p class="persist-eyebrow">Evaluation</p><h2 id="persist-results-title">What changes in the prediction?</h2><p>The model learns to separate transient disturbances from real cuts, while remaining competitive across four video domains.</p></div>
+  <div class="persist-result-grid">
+    <figure class="persist-result-figure persist-benchmark-figure">
+      <h3>Across four benchmarks</h3>
+      <p class="persist-chart-intro">Published F1 at a shared threshold of 0.5.</p>
+      <div class="persist-benchmark-scroll" role="region" tabindex="0" aria-label="Benchmark F1 comparison; scroll horizontally on small screens">
+        <table class="persist-benchmark-table">
+          <caption class="persist-sr-only">Shot boundary detection F1 at threshold 0.5 across four datasets. Best result in each column is bold.</caption>
+          <thead><tr><th scope="col">Method</th>{% for dataset in site.data.persist_benchmarks.datasets %}<th scope="col"><abbr title="{{ dataset.name }}">{{ dataset.label }}</abbr></th>{% endfor %}</tr></thead>
+          <tbody>{% for row in site.data.persist_benchmarks.rows %}
+            <tr{% if row.ours %} class="is-persist"{% endif %}><th scope="row">{{ row.label }}</th>{% for cell in row.cells %}<td>{% if cell.best %}<strong>{{ cell.value }}</strong>{% else %}{{ cell.value }}{% endif %}</td>{% endfor %}</tr>
+          {% endfor %}</tbody>
+        </table>
+      </div>
+      <figcaption>Best per column in bold. <a href="https://arxiv.org/abs/2608.29287">Full protocols and oracle results ↗</a></figcaption>
+    </figure>
+    <figure class="persist-result-figure">
+      <h3>Similar evidence. Different scores.</h3>
+      <p class="persist-chart-intro">Real cuts remain; pseudo-events are suppressed.</p>
+      <div class="persist-chart-legend"><span class="is-teal">Hard cuts</span><span class="is-plum">High-evidence pseudo-events</span></div>
+      <img src="{{ '/images/projects/persist/results/evidence-to-score.svg' | relative_url }}" width="500" height="330" loading="lazy" alt="Hard cuts and pseudo-events have similar mean local evidence, 0.865 and 0.841, but different final scores, 0.725 and 0.269.">
+      <figcaption>Mean scores on ClipShots. <a href="https://arxiv.org/abs/2608.29287">Analysis in the paper ↗</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+{% include persist-analysis.html %}
+
+<section id="citation" class="persist-section persist-citation" aria-labelledby="persist-citation-title">
+  <div class="persist-citation-heading">
+    <div><p class="persist-eyebrow">Citation</p><h2 id="persist-citation-title">Cite PERSIST</h2></div>
+    <button id="persist-copy-citation" class="persist-button" type="button" hidden>Copy BibTeX</button>
+  </div>
+  <pre><code id="persist-bibtex">{% raw %}@inproceedings{lin2026persist,
+  author    = {Lin, Tingyu and Stippel, Christian and Dadras, Armin and
+               Zenzmaier, Jakob and Kleber, Florian and Aigner, Wolfgang and
+               Sablatnig, Robert},
+  title     = {{PERSIST}: Persistent-State Discrimination for Shot Boundary Detection},
+  booktitle = {Proceedings of the British Machine Vision Conference (BMVC)},
+  year      = {2026}
+}{% endraw %}</code></pre>
+  <p id="persist-copy-status" class="persist-copy-status" role="status" aria-live="polite"></p>
+  <p class="persist-contact">Questions about the work? <a href="mailto:tylin@cvl.tuwien.ac.at">Contact Tingyu Lin</a>.</p>
+</section>

@@ -1,4 +1,5 @@
 # Conference entries use the conference year; journal entries use their final volume year.
+# display_year optionally changes the list heading while keeping the venue year.
 # The shared template sorts years descending, with Tingyu-first-author papers first within each year.
 - id: persist
   title: "PERSIST: Persistent-State Discrimination for Shot Boundary Detection"
@@ -6,13 +7,13 @@
   venue: BMVC
   year: 2026
   type: paper
-  featured: true
   summary: "Distinguishing persistent shot changes from transient visual disruptions in historical and modern video."
   image: /images/publications/persist.webp
   image_version: "f3f39118a6e4"
   alt: "The complete PERSIST architecture beside its real gradual-transition example."
   paper: https://arxiv.org/abs/2608.29287
   code: https://github.com/linty5/PERSIST
+  project: /projects/persist/
 
 - id: clappertext
   title: "ClapperText: A Benchmark for Text Recognition in Low-Resource Archival Documents"
@@ -168,6 +169,7 @@
   authors: ["Armin Dadras", "Tingyu Lin", "Robert Sablatnig", "Franziska Proksa", "Markus Seidl"]
   venue: "WACV"
   year: 2027
+  display_year: 2026
   paper: "https://arxiv.org/abs/2610.41080"
   type: "paper"
   summary: "A label-conditioned benchmark linking photographic composition labels to human-annotated visual evidence."

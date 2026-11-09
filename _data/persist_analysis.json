@@ -1,0 +1,47 @@
+[
+  {
+    "id": "matched-recall",
+    "kicker": "Equal sensitivity",
+    "title": "Fewer false alarms at equal recall",
+    "summary": "Keeping sensitivity to real transitions exposes the difference in false detections.",
+    "image": "/images/projects/persist/analysis/matched-recall.svg",
+    "alt": "False-positive counts for PERSIST and TransNetV2 on rendered diagnostic clips and natural ClipShots footage at matched recall.",
+    "caption": "False positives at matched true-transition recall, evaluated separately on each split.",
+    "selected": true,
+    "source": "https://arxiv.org/abs/2608.29287"
+  },
+  {
+    "id": "disturbance-types",
+    "kicker": "Across failure modes",
+    "title": "Five kinds of disturbance",
+    "summary": "The reduction spans flashing light, rapid camera motion, overlays and damaged film.",
+    "image": "/images/projects/persist/analysis/disturbance-types.svg",
+    "alt": "False-positive detections for flash, fast pan, text overlay, archival degradation and scratches, comparing PERSIST with TransNetV2.",
+    "caption": "False-positive detections at matched true-transition recall across five rendered disturbance types.",
+    "selected": true,
+    "source": "https://arxiv.org/abs/2608.29287"
+  },
+  {
+    "id": "decision-atlas",
+    "kicker": "Frame by frame",
+    "title": "A cut and a passing event",
+    "summary": "Read the footage alongside the model’s local evidence and final score.",
+    "image": "/images/projects/persist/analysis/decision-atlas.svg",
+    "alt": "Published true-cut and pseudo-event examples with corresponding frame strips, local evidence and final-score curves.",
+    "caption": "Two published examples: the final score follows a real cut and stays low during a passing disturbance.",
+    "selected": true,
+    "source": "https://arxiv.org/abs/2608.29287",
+    "full_image": "/images/projects/persist/analysis/decision-atlas-full.svg"
+  },
+  {
+    "id": "space-time",
+    "kicker": "A geometric view",
+    "title": "Reading suppression through time",
+    "summary": "Track the gap between local evidence and the final score through both examples.",
+    "image": "/images/projects/persist/analysis/space-time.svg",
+    "alt": "The published space-time cube, with filmstrip frames and trajectories showing the gap between local evidence and final score.",
+    "caption": "Trajectory height encodes local evidence minus final score; the filmstrips show the corresponding video frames.",
+    "selected": true,
+    "source": "https://arxiv.org/abs/2608.29287"
+  }
+]
