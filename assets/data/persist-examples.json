@@ -931,11 +931,11 @@
       "webmCodec": "vp9"
     },
     {
-      "id": "camera-shake",
-      "label": "Camera shake",
+      "id": "flicker",
+      "label": "Flicker",
       "kind": "disturbance",
-      "video": "/images/projects/persist/motion/camera-shake.mp4",
-      "poster": "/images/projects/persist/motion/camera-shake.jpg",
+      "video": "/images/projects/persist/motion/flicker.mp4",
+      "poster": "/images/projects/persist/motion/flicker.jpg",
       "fps": 28.002489110143124,
       "fpsFraction": "45000/1607",
       "startFrame": 2763,
@@ -1374,7 +1374,7 @@
         0.000463
       ],
       "groundTruth": [],
-      "note": "A brief camera movement disturbs the image without starting a new shot.",
+      "note": "The image brightens briefly, then returns to its earlier appearance. The shot continues.",
       "source": {
         "dataset": "ClipShots test set",
         "videoId": "SmKfucxKocQ",
@@ -1383,15 +1383,15 @@
       },
       "posterFrame": 2763,
       "posterTime": 0.0,
-      "videoWebm": "/images/projects/persist/motion/camera-shake.webm",
+      "videoWebm": "/images/projects/persist/motion/flicker.webm",
       "webmCodec": "vp9"
     },
     {
-      "id": "flicker",
-      "label": "Flicker",
+      "id": "camera-movement",
+      "label": "Camera movement",
       "kind": "disturbance",
-      "video": "/images/projects/persist/motion/flicker.mp4",
-      "poster": "/images/projects/persist/motion/flicker.jpg",
+      "video": "/images/projects/persist/motion/camera-movement.mp4",
+      "poster": "/images/projects/persist/motion/camera-movement.jpg",
       "fps": 25.0,
       "fpsFraction": "25",
       "startFrame": 4985,
@@ -1830,7 +1830,7 @@
         0.0025261
       ],
       "groundTruth": [],
-      "note": "Illumination changes interrupt the image, but the shot continues.",
+      "note": "The camera moves and reframes the scene, but the shot continues.",
       "source": {
         "dataset": "ClipShots test set",
         "videoId": "_6cvi36-15c",
@@ -1839,7 +1839,7 @@
       },
       "posterFrame": 5125,
       "posterTime": 5.6,
-      "videoWebm": "/images/projects/persist/motion/flicker.webm",
+      "videoWebm": "/images/projects/persist/motion/camera-movement.webm",
       "webmCodec": "vp9"
     }
   ]

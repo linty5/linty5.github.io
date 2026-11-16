@@ -1,7 +1,7 @@
 ---
 layout: persist_project
 title: "PERSIST: Persistent-State Discrimination for Shot Boundary Detection"
-description: "Explore how PERSIST separates real shot boundaries from camera shake and flicker, with video examples and synchronised model scores. BMVC 2026."
+description: "Explore how PERSIST separates real shot boundaries from flicker and camera movement, with video examples and synchronised model scores. BMVC 2026."
 permalink: /projects/persist/
 ---
 
@@ -47,13 +47,13 @@ permalink: /projects/persist/
   <div id="persist-carousel" class="persist-carousel" role="region" aria-roledescription="carousel" aria-label="Four video examples">
     <div class="persist-carousel-window">
       <div id="persist-carousel-track" class="persist-carousel-track">
-        {% assign case_ids = 'hard-cut,gradual,camera-shake,flicker' | split: ',' %}
+        {% assign case_ids = 'hard-cut,gradual,flicker,camera-movement' | split: ',' %}
         {% for case_id in case_ids %}
           {% case case_id %}
             {% when 'hard-cut' %}{% assign case_label = 'Hard cut' %}{% assign case_kind = 'New shot' %}{% assign case_note = 'A sudden change that lasts. Both models recognise the boundary.' %}
             {% when 'gradual' %}{% assign case_label = 'Gradual transition' %}{% assign case_kind = 'New shot' %}{% assign case_note = 'One shot gives way to another. The change unfolds over several frames.' %}
-            {% when 'camera-shake' %}{% assign case_label = 'Camera shake' %}{% assign case_kind = 'Same shot' %}{% assign case_note = 'The camera moves, but the shot continues. PERSIST keeps the score low.' %}
-            {% when 'flicker' %}{% assign case_label = 'Flicker' %}{% assign case_kind = 'Same shot' %}{% assign case_note = 'The light changes briefly. The scene returns without a new shot.' %}
+            {% when 'flicker' %}{% assign case_label = 'Flicker' %}{% assign case_kind = 'Same shot' %}{% assign case_note = 'The image brightens briefly, then returns to its earlier appearance. The shot continues.' %}
+            {% when 'camera-movement' %}{% assign case_label = 'Camera movement' %}{% assign case_kind = 'Same shot' %}{% assign case_note = 'The camera moves and reframes the scene, but the shot continues.' %}
           {% endcase %}
           <article class="persist-scene" data-scene="{{ case_id }}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} of 4: {{ case_label }}">
             <div class="persist-scene-heading">
@@ -81,7 +81,7 @@ permalink: /projects/persist/
       <output id="persist-frame" for="persist-seek">Frame 666</output>
     </div>
     <div class="persist-case-nav" aria-label="Select an example" hidden>
-      {% assign case_labels = 'Hard cut,Gradual transition,Camera shake,Flicker' | split: ',' %}
+      {% assign case_labels = 'Hard cut,Gradual transition,Flicker,Camera movement' | split: ',' %}
       {% for case_id in case_ids %}
         <button class="persist-case" type="button" data-case="{{ case_id }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="Show {{ case_labels[forloop.index0] }}">
           <img src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.jpg' | relative_url }}" width="44" height="44" alt="" loading="lazy">
