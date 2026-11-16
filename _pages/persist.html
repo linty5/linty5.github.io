@@ -5,6 +5,9 @@ description: "Explore how PERSIST separates real shot boundaries from flicker an
 permalink: /projects/persist/
 ---
 
+{% assign asset_version = site.time | date: '%s' %}
+{% assign asset_version = site.github.build_revision | default: asset_version %}
+
 <header class="persist-hero">
   <p class="persist-venue">BMVC 2026</p>
   <h1><span class="persist-name">PERSIST</span><span class="persist-title">Persistent-State Discrimination<br class="persist-wide-break"> for Shot Boundary Detection</span></h1>
@@ -35,7 +38,7 @@ permalink: /projects/persist/
   <p class="persist-demo-callout"><a href="https://huggingface.co/spaces/linty5/PERSIST">🔥 Try Online Demo NOW 🔥</a></p>
 </header>
 
-<section id="examples" class="persist-examples" aria-labelledby="examples-title" data-manifest="{{ '/assets/data/persist-examples.json' | relative_url }}">
+<section id="examples" class="persist-examples" aria-labelledby="examples-title" data-manifest="{{ '/assets/data/persist-examples.json' | relative_url }}?v={{ asset_version }}">
   <div class="persist-section-heading persist-examples-heading">
     <div><p class="persist-eyebrow">The difference is in what follows</p><h2 id="examples-title">See what persists.</h2></div>
     <div class="persist-carousel-actions" hidden>
@@ -62,7 +65,7 @@ permalink: /projects/persist/
             </div>
             <div class="persist-evidence-grid">
               <figure class="persist-clip">
-                <div class="persist-video-well"><video class="persist-example-video" controls muted playsinline preload="metadata" poster="{{ '/images/projects/persist/motion/' | append: case_id | append: '.jpg' | relative_url }}" width="128" height="128" aria-label="{{ case_label }} video"><source src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.webm' | relative_url }}" type='video/webm; codecs="vp9"'><source src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.mp4' | relative_url }}" type="video/mp4">Your browser does not support video playback.</video></div>
+                <div class="persist-video-well"><video class="persist-example-video" controls muted playsinline preload="metadata" poster="{{ '/images/projects/persist/motion/' | append: case_id | append: '.jpg' | relative_url }}?v={{ asset_version }}" width="128" height="128" aria-label="{{ case_label }} video"><source src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.webm' | relative_url }}?v={{ asset_version }}" type='video/webm; codecs="vp9"'><source src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.mp4' | relative_url }}?v={{ asset_version }}" type="video/mp4">Your browser does not support video playback.</video></div>
                 <figcaption>ClipShots · evaluation excerpt</figcaption>
               </figure>
               <div class="persist-score-panel" hidden>
@@ -84,15 +87,15 @@ permalink: /projects/persist/
       {% assign case_labels = 'Hard cut,Gradual transition,Flicker,Camera movement' | split: ',' %}
       {% for case_id in case_ids %}
         <button class="persist-case" type="button" data-case="{{ case_id }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="Show {{ case_labels[forloop.index0] }}">
-          <img src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.jpg' | relative_url }}" width="44" height="44" alt="" loading="lazy">
+          <img src="{{ '/images/projects/persist/motion/' | append: case_id | append: '.jpg' | relative_url }}?v={{ asset_version }}" width="44" height="44" alt="" loading="lazy">
           <span><span class="persist-case-index">0{{ forloop.index }}</span><span class="persist-case-label">{{ case_labels[forloop.index0] }}</span></span><i class="persist-case-progress" aria-hidden="true"></i>
         </button>
       {% endfor %}
     </div>
   </div>
-  <a id="persist-score-fallback" href="{{ '/images/projects/persist/teaser.png' | relative_url }}"><img src="{{ '/images/projects/persist/teaser.png' | relative_url }}" width="6224" height="2102" alt="The original figure compares four real clips and their recorded boundary scores."></a>
+  <a id="persist-score-fallback" href="{{ '/images/projects/persist/teaser.png' | relative_url }}?v={{ asset_version }}"><img src="{{ '/images/projects/persist/teaser.png' | relative_url }}?v={{ asset_version }}" width="6224" height="2102" alt="The original figure compares four real clips and their recorded boundary scores."></a>
   <p id="persist-example-status" class="persist-example-status" role="status"></p>
-  <p class="persist-evidence-caption">Real clips with recorded frame scores. The <strong>cue-only baseline</strong> uses the same backbone and training setup. <a href="{{ '/images/projects/persist/teaser.png' | relative_url }}">Original figure ↗</a></p>
+  <p class="persist-evidence-caption">Real clips with recorded frame scores. The <strong>cue-only baseline</strong> uses the same backbone and training setup. <a href="{{ '/images/projects/persist/teaser.png' | relative_url }}?v={{ asset_version }}">Original figure ↗</a></p>
   <noscript><p class="persist-note">The first video and original comparison figure are available above. Enable JavaScript for automatic playback of all four examples and synchronised scores.</p></noscript>
 </section>
 
